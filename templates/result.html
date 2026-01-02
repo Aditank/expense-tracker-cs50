@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+</head>
+<body>
+
+<h2>Financial Summary</h2>
+
+<p><strong>Total Income:</strong> ₹{{ income }}</p>
+<p><strong>Total Expense:</strong> ₹{{ expense }}</p>
+
+<h3>Expenses by Category</h3>
+
+{{ table | safe }}
+
+<br><br>
+<a href="/download">Download Excel Report</a>
+<br><br>
+<a href="/">Upload Another File</a>
+
+</body>
+</html>
