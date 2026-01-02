@@ -1,3 +1,5 @@
+CS50x Final Project — Harvard University
+
 # Expense Tracker & Financial Insights System
 
 #### Video Demo: https://www.youtube.com/watch?v=BNXpRNH3-gY
