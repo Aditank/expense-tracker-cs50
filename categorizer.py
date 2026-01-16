@@ -1,6 +1,3 @@
-# AI DISCLOSURE:
-# AI tools were used for syntax guidance. Logic and structure are my own.
-
 def categorize_transaction(description):
     description = description.lower()
 
