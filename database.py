@@ -1,6 +1,3 @@
-# AI DISCLOSURE:
-# AI tools were used for syntax guidance. Logic and structure are my own.
-
 import sqlite3
 
 DB_NAME = "finance.db"
