@@ -1,6 +1,3 @@
-# AI DISCLOSURE:
-# AI tools were used for syntax guidance. Logic and structure are my own.
-
 from flask import Flask, render_template, request, redirect, session, send_file
 from werkzeug.security import generate_password_hash, check_password_hash
 import pandas as pd
