@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, redirect, session, send_file
 from werkzeug.security import generate_password_hash, check_password_hash
 import pandas as pd
 import sqlite3
-
-from database import init_db, insert_transactions, fetch_summary
+import os
+from database import DB_NAME, init_db, insert_transactions, fetch_summary
 from categorizer import categorize_transaction
 from analysis import summary_dataframe
 
@@ -29,7 +29,7 @@ def register():
 
         hash_pw = generate_password_hash(password)
 
-        conn = sqlite3.connect("finance.db")
+        conn = sqlite3.connect(DB_NAME)
         cur = conn.cursor()
         try:
             cur.execute(
@@ -53,7 +53,7 @@ def login():
         username = request.form["username"]
         password = request.form["password"]
 
-        conn = sqlite3.connect("finance.db")
+        conn = sqlite3.connect(DB_NAME)
         cur = conn.cursor()
         cur.execute(
             "SELECT id, password_hash FROM users WHERE username = ?",
@@ -111,4 +111,4 @@ def download():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
